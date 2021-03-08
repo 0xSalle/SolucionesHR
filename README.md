@@ -1,2 +1,2 @@
 # SolucionesHR
-Las soluciones que encontre para los retos de HackerRank
+Soluciones que encontre y use para los retos de HackerRank
