@@ -1,0 +1,65 @@
+import java.util.Scanner;
+
+public class Solution {
+
+    static boolean isAnagram(String a, String b) {
+        // Complete the function
+        
+        int aL = a.length();
+        int bL = b.length();
+        char[] aA = new char[aL];
+        char[] bA = new char[bL];
+        
+        if(aL == bL){
+            
+            aA = a.toLowerCase().toCharArray();
+            bA = b.toLowerCase().toCharArray();
+            
+            for(int i = 0 ; i < aA.length;i++){
+                for(int j = i+1 ; j< aA.length;j++){
+                    if(aA[i] > aA[j]){
+                        char temp = aA[i];
+                        aA[i] = aA[j];
+                        aA[j] = temp;
+                    }
+                }
+            }
+            
+            for(int i = 0 ; i < bA.length;i++){
+                for(int j = i+1 ; j< bA.length;j++){
+                    if(bA[i] > bA[j]){
+                        char temp = bA[i];
+                        bA[i] = bA[j];
+                        bA[j] = temp;
+                    }
+                }
+            }
+        
+                
+        */    
+            for(int x = aL-1; x>=0;x--){  
+                if(aA[x]!=bA[x])
+                {return false;}
+                else{
+                return true;}
+                
+                
+            }
+        }    
+        return false;
+        */
+        
+        }
+        return java.util.Arrays.equals(aA, bA);
+    }
+
+  public static void main(String[] args) {
+    
+        Scanner scan = new Scanner(System.in);
+        String a = scan.next();
+        String b = scan.next();
+        scan.close();
+        boolean ret = isAnagram(a, b);
+        System.out.println( (ret) ? "Anagrams" : "Not Anagrams" );
+    }
+}
